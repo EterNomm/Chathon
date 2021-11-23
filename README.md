@@ -38,21 +38,19 @@ bot.command(command_name="test", response="work!")
 <details>
     <summary>Plan</summary>
     <br>
-    <li>
-        <a>Adding Colors</a>
+    <ul>
+        <li>Adding Colors</li>
         <p>This part will be done by <a href="https://github.com/TheGenocides" target="_blank">TheGenocides</a> using colorama</p>
-    </li>
-    <li>
-        <a>Using Decorator</a>
+        <li>Using Decorator</li>
         <p>We will try to create a decorator for the bot command, for example: @bot.command()</p>
-    </li>
+    </ul>
 </details>
 
 <details>
     <summary>Bug list</summary>
     <br>
-    <li>
-        <a>Spam (Small chances)</a>
+    <ul>
+        <li>Spam (Small chances)</li>
         <p>Sometimes bots will spam when responding to users</p>
-    </li>
+    </ul>
 </details>
