@@ -19,9 +19,6 @@ def read_requirements():
     return requirements
 
 
-#####################################
-#VERSION = "1.0"
-#####################################
 
 setup(
     name='chathon',
@@ -40,7 +37,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=read_requirements(),
-    keywords=["python", "chathon", "chat", "chat room", "chat app"],
+    keywords=["python", "chathon", "chat", "chat room", "chat app", "chat bot"],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
