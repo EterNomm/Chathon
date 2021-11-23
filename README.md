@@ -52,24 +52,7 @@ bot.command(command_name="test", response="work!")
     <summary>Bug list</summary>
     <br>
     <li>
-        <a>Spam</a>
+        <a>Spam (Small chances)</a>
         <p>Sometimes bots will spam when responding to users</p>
-    </li>
-</details>
-
-<details>
-    <summary>Version type</summary>
-    <br>
-    <li>
-        <a>FULL</a>
-        <p>The full version/stable, usually only one version number, for example: 1.0.0, 2.0</p>
-    </li>
-    <li>
-        <a>ALPHA</a>
-        <p>The patch version</p>
-    </li>
-    <li>
-        <a>BETA</a>
-        <p>The development version</p>
     </li>
 </details>
