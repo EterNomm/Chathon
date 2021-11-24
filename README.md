@@ -27,7 +27,7 @@ pip install git+https://github.com/EterNomm/Chathon
 ```py
 import chathon
 
-server = chathon.Server(port=1212)
+server = chathon.Server(port=1212, record_conversation=False)
 server.start()
 ```
 - Client side
