@@ -5,6 +5,7 @@ from time import sleep
 class Server:
     r"""A class that implements the server side
     -----------
+    Parameters :
     - ip: :class:`localhost/127.0.0.1` | you cannot change server ip because server ip always use localhost
     - port: :class:`int` | The server port.
     - record_conversation: :class:`False/True` | Record all client conversation in your server (if `True`, client will get warning message that your server is record all client conversation)
@@ -28,6 +29,9 @@ class Server:
         self.server = server
 
     def start(self):
+        r"""Nothing, just function to start the server
+        -----------
+        """
         clients = []
         nicknames = []
         server = self.server
