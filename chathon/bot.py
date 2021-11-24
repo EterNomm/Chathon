@@ -3,6 +3,15 @@ import threading
 from time import sleep
 
 class Bot:
+    r"""A class that implements the bot engine
+    -----------
+    Parameters :
+    - bot_name: :class:`str` | set bot username
+    - prefix: :class:`str` | Bot prefix
+    - server_ip: :class:`str` | Server IP for bot to enter
+    - server_port: :class:`int` | Server Port for bot to enter
+    """
+
     def __init__(self, bot_name:str, prefix:str, server_ip:str, server_port:int):
         bot = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         bot.connect((server_ip, server_port))
@@ -13,6 +22,13 @@ class Bot:
         self.user_input = None
 
     def command(self, command_name, response):
+        r"""A class that implements the bot engine
+        -----------
+        Parameters :
+        - command_name: :class:`str` | command name so that clients can use it, for example: `test` for`/test`
+        - response: :class:`str` | Command response
+        """
+
         bot = self.bot
         nickname = self.bot_name
         prefix = self.prefix
