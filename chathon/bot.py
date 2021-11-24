@@ -21,9 +21,9 @@ class Bot:
                 try:
                     # Receive Message From Server
                     # If 'NICK' Send Nickname
-                    message = bot.recv(1024).decode('ascii')
+                    message = bot.recv(1024).decode('UTF-8')
                     if message == 'NICK':
-                        bot.send(nickname.encode('ascii'))
+                        bot.send(nickname.encode('UTF-8'))
                     else:
                         print(message)
                         user_msg = message
@@ -42,7 +42,7 @@ class Bot:
             while True:
                 if self.user_input == f"{prefix}{command_name}":
                     message = '{}: {}'.format(f"{nickname} [BOT]", response)
-                    bot.send(message.encode('ascii'))
+                    bot.send(message.encode('UTF-8'))
                     sleep(1) # prevent spam
                 else:
                     pass
