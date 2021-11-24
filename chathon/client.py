@@ -18,9 +18,9 @@ class Client:
                 try:
                     # Receive Message From Server
                     # If 'NICK' Send Nickname
-                    message = client.recv(1024).decode('ascii')
+                    message = client.recv(1024).decode('UTF-8')
                     if message == 'NICK':
-                        client.send(nickname.encode('ascii'))
+                        client.send(nickname.encode('UTF-8'))
                     else:
                         print(message)
                 except:
@@ -40,7 +40,7 @@ class Client:
 
                 else:
                     message = '{}: {}'.format(nickname, input_msg)
-                    client.send(message.encode('ascii'))
+                    client.send(message.encode('UTF-8'))
         
         # Starting Threads For Listening And Writing
         receive_thread = threading.Thread(target=receive)
