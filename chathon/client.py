@@ -4,10 +4,23 @@ import platform
 import os
 
 class Client:
+    r"""A class that implements the server side
+    -----------
+    Parameters :
+    - username: :class:`str` | set your username to connect to server
+    """
+
     def __init__(self, username:str):
         self.username = username
 
     def connect(self, server_ip:str, server_port:int):
+        r"""Connect to the server
+        -----------
+        Parameters :
+        - server_ip: :function:`str` | Server IP
+        - server_port: :function:`int` | Server Port
+        """
+
         nickname = self.username
         
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
