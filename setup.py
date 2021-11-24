@@ -39,7 +39,7 @@ setup(
     install_requires=read_requirements(),
     keywords=["python", "chathon", "chat", "chat room", "chat app", "chat bot"],
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: Android',
