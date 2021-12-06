@@ -1,5 +1,5 @@
 [![Visistors](https://visitor-badge.glitch.me/badge?page_id=EterNomm.Chathon)](https://github.com/EterNomm/Chathon)
-[![Downloads](https://static.pepy.tech/personalized-badge/chathon?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/chathon)
+[![Downloads](https://static.pepy.tech/personalized-badge/chathon?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Total%20Downloads)](https://pepy.tech/project/chathon)
 [![PyPI - Status](https://img.shields.io/pypi/status/chathon?label=Status&logo=python&logoColor=blue)](https://pypi.org/project/chathon)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/Chathon?label=PyPI%20Downloads&logo=pypi)](https://pypi.org/project/chathon)
 [![PyPI](https://img.shields.io/pypi/v/chathon?label=PyPI%20Version&logo=pypi)](https://pypi.org/project/chathon)
