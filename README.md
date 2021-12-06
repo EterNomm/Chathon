@@ -1,4 +1,5 @@
 [![Visistors](https://visitor-badge.glitch.me/badge?page_id=EterNomm.Chathon)](https://github.com/EterNomm/Chathon)
+[![Downloads](https://static.pepy.tech/personalized-badge/chathon?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Downloads)](https://pepy.tech/project/chathon)
 [![PyPI - Status](https://img.shields.io/pypi/status/chathon?label=Status&logo=python&logoColor=blue)](https://pypi.org/project/chathon)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/Chathon?label=PyPI%20Downloads&logo=pypi)](https://pypi.org/project/chathon)
 [![PyPI](https://img.shields.io/pypi/v/chathon?label=PyPI%20Version&logo=pypi)](https://pypi.org/project/chathon)
@@ -34,7 +35,7 @@ server.start()
 ```py
 import chathon
 
-client = chathon.Client(username="LyQuid")
+client = chathon.Client(username="LyQuid", badword_filter=True)
 client.connect(server_ip="127.0.0.1", server_port=1212)
 ```
 - Bot
@@ -50,7 +51,6 @@ bot.command(command_name="test", response="work!")
     <br>
     <ul>
         <li>Adding Colors</li>
-        <p>This part will be done by <a href="https://github.com/TheGenocides" target="_blank">TheGenocides</a> using colorama</p>
         <li>Using Decorator</li>
         <p>We will try to create a decorator for the bot command, for example: @bot.command()</p>
     </ul>
