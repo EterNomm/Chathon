@@ -2,16 +2,19 @@ import socket
 import threading
 import platform
 import os
+from better_profanity import profanity
 
 class Client:
     r"""A class that implements the server side
     -----------
     Parameters :
     - username: :class:`str` | set your username to connect to server
+    - badword_filter: :class:`True/False` | Filter badword message (Default : True)
     """
 
-    def __init__(self, username:str):
+    def __init__(self, username:str, badword_filter=True):
         self.username = username
+        self.badword_filter = badword_filter
 
     def connect(self, server_ip:str, server_port:int):
         r"""Connect to the server
@@ -27,6 +30,7 @@ class Client:
         client.connect((server_ip, server_port))
 
         def receive():
+            badword_filter = self.badword_filter
             while True:
                 try:
                     # Receive Message From Server
@@ -35,7 +39,11 @@ class Client:
                     if message == 'NICK':
                         client.send(nickname.encode('UTF-8'))
                     else:
-                        print(message)
+                        if badword_filter == True:
+                            censored = profanity.censor(message)
+                            print(censored)
+                        else:
+                            print(message)
                 except:
                     # Close Connection When Error
                     print("An error occured!")
