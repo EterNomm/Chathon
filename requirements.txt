@@ -1,2 +1,3 @@
 python-socketio==5.4.1
 colorama==0.4.4
+better_profanity==0.7.0
