@@ -3,8 +3,6 @@
 [![PyPI - Status](https://img.shields.io/pypi/status/chathon?label=Status&logo=python&logoColor=blue)](https://pypi.org/project/chathon)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/Chathon?label=PyPI%20Downloads&logo=pypi)](https://pypi.org/project/chathon)
 [![PyPI](https://img.shields.io/pypi/v/chathon?label=PyPI%20Version&logo=pypi)](https://pypi.org/project/chathon)
-[![GitHub stars](https://img.shields.io/github/stars/EterNomm/Chathon?label=Stars&logo=github)](https://github.com/EterNomm/Chathon/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/EterNomm/Chathon?label=Forks&logo=github)](https://github.com/EterNomm/Chathon/network)
 [![GitHub issues](https://img.shields.io/github/issues/EterNomm/Chathon?label=Issues&logo=github)](https://github.com/EterNomm/Chathon/issues)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/EterNomm/Chathon?label=Commit%20Activity&logo=github)
 [![Discord](https://img.shields.io/discord/887650006977347594?color=blue&label=EterNomm&logo=discord&logoColor=blue)](https://discord.com/invite/qpT2AeYZRN)
