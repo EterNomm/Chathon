@@ -4,7 +4,7 @@
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/Chathon?label=PyPI%20Downloads&logo=pypi)](https://pypi.org/project/chathon)
 [![PyPI](https://img.shields.io/pypi/v/chathon?label=PyPI%20Version&logo=pypi)](https://pypi.org/project/chathon)
 [![GitHub issues](https://img.shields.io/github/issues/EterNomm/Chathon?label=Issues&logo=github)](https://github.com/EterNomm/Chathon/issues)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/EterNomm/Chathon?label=Commit%20Activity&logo=github)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/y/EterNomm/Chathon?label=Commit%20Activity&logo=github)](https://github.com/EterNomm/Chathon/commits/main)
 [![Discord](https://img.shields.io/discord/887650006977347594?color=blue&label=EterNomm&logo=discord&logoColor=blue)](https://discord.com/invite/qpT2AeYZRN)
 
 # Chathon
@@ -51,6 +51,8 @@ bot.command(command_name="test", response="work!")
         <li>Adding Colors</li>
         <li>Using Decorator</li>
         <p>We will try to create a decorator for the bot command, for example: @bot.command()</p>
+        <li>Bot can respond to users without prefix</li>
+        <p>Example : user say "hello", then bot will respond "hi"</p>
     </ul>
 </details>
 
