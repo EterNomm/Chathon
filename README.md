@@ -24,7 +24,7 @@ pip install git+https://github.com/EterNomm/Chathon
 [Here](https://github.com/EterNomm/Chathon/tree/main/examples)
 
 
-## OtherO
+## Other
 [Our Discord Server](https://discord.gg/qpT2AeYZRN)
 
 <details>
