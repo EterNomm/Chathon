@@ -21,46 +21,18 @@ pip install git+https://github.com/EterNomm/Chathon
 ```
 
 ## Examples
+[Here](https://github.com/EterNomm/Chathon/tree/main/examples)
 
-- Server side
-```py
-import chathon
 
-server = chathon.Server(port=1212, record_conversation=False)
-server.start()
-```
-- Client side
-```py
-import chathon
-
-client = chathon.Client(username="LyQuid", badword_filter=True)
-client.connect(server_ip="127.0.0.1", server_port=1212)
-```
-- Bot
-```py
-import chathon
-
-bot = chathon.Bot(bot_name="Chathon", prefix="/", server_ip="127.0.0.1", server_port=1212)
-bot.command(command_name="test", response="work!")
-```
+## OtherO
+[Our Discord Server](https://discord.gg/qpT2AeYZRN)
 
 <details>
     <summary>Plan</summary>
     <br>
     <ul>
         <li>Adding Colors</li>
-        <li>Using Decorator</li>
-        <p>We will try to create a decorator for the bot command, for example: @bot.command()</p>
         <li>Bot can respond to users without prefix</li>
         <p>Example : user say "hello", then bot will respond "hi"</p>
-    </ul>
-</details>
-
-<details>
-    <summary>Bug list</summary>
-    <br>
-    <ul>
-        <li>Spam (Small chances)</li>
-        <p>Sometimes bots will spam when responding to users</p>
     </ul>
 </details>
