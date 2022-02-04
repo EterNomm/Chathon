@@ -2,10 +2,6 @@ import socket
 import threading
 from time import sleep
 
-def list_to_str(s): 
-    string = " " 
-    return (string.join(s))
-
 class Bot:
     r"""A class that implements the bot engine.
     -----------
@@ -75,7 +71,7 @@ class Bot:
                 ui = self.user_input
                 ui = str(ui)
                 ui_replace = ui.split(": ")[1:]
-                ui_replace = list_to_str(ui_replace)
+                ui_replace = "".join(ui_replace)
                 arguments = ui_replace.split(" ")[1:]
                 cmd_name = ui_replace.replace(prefix, "")
                 cmd_name = cmd_name.split(" ")[0]
