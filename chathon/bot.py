@@ -1,6 +1,7 @@
 import socket
 import threading
 from time import sleep
+import colorgb
 
 class Bot:
     r"""A class that implements the bot engine.
@@ -12,11 +13,15 @@ class Bot:
     - server_port: :class:`int` | Server Port for bot to enter
     """
 
-    def __init__(self, bot_name:str, prefix:str, server_ip:str, server_port:int):
+    def __init__(self, bot_name:str, prefix:str, server_ip:str, server_port:int, bot_color:str=None):
         bot = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         bot.connect((server_ip, server_port))
-
-        self.bot_name = bot_name
+        
+        if bot_color == None:
+        	self.bot_name = bot_name
+        else:
+        	self.bot_name = colorgb.fore(bot_name, bot_color)
+        	
         self.prefix = prefix
         self.bot = bot
         self.user_input = None
