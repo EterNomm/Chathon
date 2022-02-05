@@ -48,7 +48,7 @@ class Bot:
         """
         self.response = message
 
-    def run(self):
+    def run(self, debug=False):
         """
         A method to run the bot.
         """
@@ -90,7 +90,11 @@ class Bot:
                 else:
                     if get_input == prefix+cmd_name:
                         command_name(*arguments)
-                        message = '{}: {}'.format(f"{nickname} [BOT]", self.response)
+                        if debug == True:
+                            message = f"{nickname} {colorgb.fore("[BOT]", "lred")}: {self.response}"
+                        else:
+                            message = f"{nickname} {colorgb.fore("[BOT]", "lgreen")}: {self.response}"
+                            
                         bot.send(message.encode('UTF-8'))
                         sleep(1) # prevent spam
                     else:
