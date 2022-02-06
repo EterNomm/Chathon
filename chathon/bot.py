@@ -11,7 +11,7 @@ class Bot:
     - prefix: `str` | Bot prefix.
     - server_ip: `str` | Server IP for bot to enter.
     - server_port: `int` | Server Port for bot to enter.
-    - bot_color: `str` | Set your bot color. Scroll down to see the list of available colors.
+    - bot_color: `str` | Set your bot username color. Scroll down to see the list of available colors.
     ----
     Basic Colors :
     - `black`
