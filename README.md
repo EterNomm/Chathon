@@ -8,6 +8,8 @@
 [![Discord](https://img.shields.io/discord/887650006977347594?color=blue&label=EterNomm&logo=discord&logoColor=blue)](https://discord.com/invite/qpT2AeYZRN)
 
 # Chathon
+[![Chathon Changelog](https://img.shields.io/badge/Chathon-Changelog-informational?style=for-the-badge&logo=github)](https://gist.github.com/LyQuid12/a3b1447175d1f2f67d698d3a4e197dcd)
+
 A Python packages for make own chat room
 
 ## Install
