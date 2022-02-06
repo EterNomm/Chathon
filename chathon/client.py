@@ -3,17 +3,42 @@ import threading
 import platform
 import os
 from better_profanity import profanity
+import colorgb
 
 class Client:
-    r"""A class that implements the server side
+    r"""A class that implements the server side.
     -----------
     Parameters :
-    - username: :class:`str` | set your username to connect to server
-    - badword_filter: :class:`True/False` | Filter badword message (Default : True)
+    - username: `str` | set your username to connect to server.
+    - username_color: `str` | Set your username color. Scroll down to see the list of available colors. (Default: `None`)
+    - badword_filter: `True/False` | Filter badword message. (Default : True)
+    ----
+    Basic Colors :
+    - `black`
+    - `red`
+    - `green`
+    - `yellow`
+    - `blue`
+    - `purple`
+    - `cyan`
+    - `white`
+    -----
+    Light Colors :
+    - `grey`
+    - `lred`
+    - `lgreen`
+    - `lyellow`
+    - `lblue`
+    - `lpurple`
+    - `lcyan`
     """
 
-    def __init__(self, username:str, badword_filter=True):
-        self.username = username
+    def __init__(self, username:str, username_color:str=None, badword_filter=True):
+        if username_color == None:
+            self.username = username
+        else:
+            self.username = f"{colorgb.fore(username, username_color)}"
+
         self.badword_filter = badword_filter
 
     def connect(self, server_ip:str, server_port:int):
@@ -26,15 +51,21 @@ class Client:
 
         nickname = self.username
         
-        client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client.connect((server_ip, server_port))
+        try:
+            client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            client.connect((server_ip, server_port))
+        except socket.error:
+            print()
+            print(colorgb.fore("An error occurred!", "lred"))
+            print("Possible error : Server offline.")
+            print()
+            client.close()
+            exit()
 
         def receive():
             badword_filter = self.badword_filter
             while True:
                 try:
-                    # Receive Message From Server
-                    # If 'NICK' Send Nickname
                     message = client.recv(1024).decode('UTF-8')
                     if message == 'NICK':
                         client.send(nickname.encode('UTF-8'))
@@ -45,10 +76,12 @@ class Client:
                         else:
                             print(message)
                 except:
-                    # Close Connection When Error
-                    print("An error occured!")
+                    print()
+                    print(colorgb.fore("An error occurred!", "lred"))
+                    print("Possible error : Server offline.")
+                    print()
                     client.close()
-                    break
+                    exit()
 
         def write():
             while True:
@@ -63,7 +96,6 @@ class Client:
                     message = '{}: {}'.format(nickname, input_msg)
                     client.send(message.encode('UTF-8'))
         
-        # Starting Threads For Listening And Writing
         receive_thread = threading.Thread(target=receive)
         receive_thread.start()
         
