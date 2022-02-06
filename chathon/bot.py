@@ -130,7 +130,7 @@ class Bot:
                             message = f"{nickname} {colorgb.fore('[BOT]', 'cyan')}: {self.response}"
                             
                         bot.send(message.encode('UTF-8'))
-                        sleep(1) # prevent spam
+                        sleep(0.1) # prevent spam
                     else:
                         pass
 
