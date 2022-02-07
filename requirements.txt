@@ -1,3 +1,2 @@
-python-socketio==5.4.1
 colorgb
 better_profanity==0.7.0
