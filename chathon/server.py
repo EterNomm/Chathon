@@ -26,7 +26,7 @@ class Server:
         if record_conversation == True:
             record_conversation = colorgb.fore(True, 'lred')
         else:
-            record_conversation = colorgb.fore(True, 'lgreen')
+            record_conversation = colorgb.fore(False, 'lgreen')
         print(f"Record Conversation : {record_conversation}")
         print()
         self.print_log = record_conversation
