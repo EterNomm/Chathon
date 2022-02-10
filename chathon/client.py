@@ -4,9 +4,10 @@ import platform
 import os
 from better_profanity import profanity
 import colorgb
+from time import sleep
 
 class Client:
-    r"""A class that implements the server side.
+    """A class that implements the server side.
     -----------
     Parameters :
     - username: `str` | set your username to connect to server.
@@ -52,12 +53,14 @@ class Client:
         nickname = self.username
         
         try:
+            print(f"Connecting to {server_ip}:{server_port}...")
             client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             client.connect((server_ip, server_port))
-        except socket.error:
+        except socket.error as error:
             print()
-            print(colorgb.fore("An error occurred!", "lred"))
-            print("Possible error : Server offline.")
+            print(colorgb.fore("An error occurred :", "lred"))
+            sleep(1)
+            print(error)
             print()
             client.close()
             exit()
@@ -75,11 +78,11 @@ class Client:
                             print(censored)
                         else:
                             print(message)
-                except:
+                except socket.error as error:
                     print()
-                    print(colorgb.fore("An error occurred!", "lred"))
-                    print("Possible error : Server offline.")
-                    print()
+                    print(colorgb.fore("An error occurred :", "lred"))
+                    sleep(1)
+                    print(error)
                     client.close()
                     exit()
 
