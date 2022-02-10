@@ -88,13 +88,13 @@ class Server:
                 clients.append(client)
         
                 print("New Client : {}".format(nickname))
+                client.send('Connected to server!'.encode('UTF-8'))
                 broadcast("{} joined!".format(nickname).encode('UTF-8'))
                 if self.welcome_msg == None:
                     pass
                 else:
                     client.send(self.welcome_msg.encode('UTF-8'))
 
-                client.send('Connected to server!'.encode('UTF-8'))
                 if self.print_log == True:
                     msg = colorgb.fore("Warning, the server may record your conversation.", "lred")
                     client.send(f"\n{msg}\n\n".encode('UTF-8'))
