@@ -37,10 +37,11 @@ class Bot:
         try:
            bot = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
            bot.connect((server_ip, server_port))
-        except socket.error:
+        except socket.error as error:
             print()
-            print(colorgb.fore("An error occurred!", "lred"))
-            print("Possible error(s) : Server offline, bot script error")
+            print(colorgb.fore("An error occurred :", "lred"))
+            sleep(0.5)
+            print(error)
             print()
             bot.close()
             exit()
@@ -96,10 +97,11 @@ class Bot:
                     else:
                         print(message)
                         self.user_input = message
-                except:
+                except socket.error as error:
                     print()
-                    print(colorgb.fore("An error occurred!", "lred"))
-                    print("Possible error(s) : Server offline, bot script error")
+                    print(colorgb.fore("An error occurred :", "lred"))
+                    sleep(0.5)
+                    print(error)
                     print()
                     bot.close()
                     exit()
