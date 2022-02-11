@@ -24,10 +24,10 @@ class Server:
         print(f"IP : {host} (use your network IP address for client connect to your server)")
         print(f"PORT : {port}")
         if record_conversation == True:
-            record_conversation = colorgb.fore(True, 'lred')
+            rc = colorgb.fore(True, 'lred')
         else:
-            record_conversation = colorgb.fore(False, 'lgreen')
-        print(f"Record Conversation : {record_conversation}")
+            rc = colorgb.fore(False, 'lgreen')
+        print(f"Record Conversation : {rc}")
         print()
         self.print_log = record_conversation
         self.server = server
@@ -40,7 +40,7 @@ class Server:
         Parameter :
         - message: `str`
         """
-        message = f"{message}\n"
+        message = f"\n{message}\n"
         self.welcome_msg = message
         print(f"Welcome message :")
         print(message)
@@ -72,15 +72,15 @@ class Server:
                     clients.remove(client)
                     client.close()
                     nickname = nicknames[index]
-                    broadcast('{} left!'.format(nickname).encode('UTF-8'))
-                    print('{} left'.format(nickname))
+                    broadcast(f'{nickname} left!'.encode('UTF-8'))
+                    print(f'{nickname} left')
                     nicknames.remove(nickname)
                     break
         
         def receive():
             while True:
                 client, address = server.accept()
-                print("Connected with {}".format(str(address)))
+                print(f"Connected with {str(address)}")
         
                 client.send('NICK'.encode('UTF-8'))
                 nickname = client.recv(1024).decode('UTF-8')
@@ -89,7 +89,7 @@ class Server:
         
                 print("New Client : {}".format(nickname))
                 client.send('Connected to server!'.encode('UTF-8'))
-                broadcast("{} joined!".format(nickname).encode('UTF-8'))
+                broadcast(f"{nickname} joined!".encode('UTF-8'))
                 if self.welcome_msg == None:
                     pass
                 else:
