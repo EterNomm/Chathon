@@ -59,7 +59,7 @@ class Client:
         except socket.error as error:
             print()
             print(colorgb.fore("An error occurred :", "lred"))
-            sleep(1)
+            sleep(0.5)
             print(error)
             print()
             client.close()
@@ -78,10 +78,11 @@ class Client:
                             print(censored)
                         else:
                             print(message)
+
                 except socket.error as error:
                     print()
                     print(colorgb.fore("An error occurred :", "lred"))
-                    sleep(1)
+                    sleep(0.5)
                     print(error)
                     client.close()
                     exit()
@@ -89,14 +90,14 @@ class Client:
         def write():
             while True:
                 input_msg = input('')
-                if input_msg == "/clear":
+                if input_msg == "//clear":
                     if platform.uname()[0] == "Windows":
                         os.system("cls")
                     else:
                         os.system("clear")
 
                 else:
-                    message = '{}: {}'.format(nickname, input_msg)
+                    message = f'{nickname}: {input_msg}'
                     client.send(message.encode('UTF-8'))
         
         receive_thread = threading.Thread(target=receive)
