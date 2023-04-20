@@ -1,3 +1,8 @@
+> **This project has been archived, we don't know when it will be continued.**
+> **If you have any questions, you are very welcome to ask on our Discord server.**
+> **[Reasons and more detailed explanations](https://gist.github.com/LyQuid12/281d0db00d672695d9ad01e62a28f591).**
+<br>
+
 [![Visistors](https://visitor-badge.glitch.me/badge?page_id=EterNomm.Chathon)](https://github.com/EterNomm/Chathon)
 [![Downloads](https://static.pepy.tech/personalized-badge/chathon?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Total%20Downloads)](https://pepy.tech/project/chathon)
 [![PyPI - Status](https://img.shields.io/pypi/status/chathon?label=Status&logo=python&logoColor=blue)](https://pypi.org/project/chathon)
